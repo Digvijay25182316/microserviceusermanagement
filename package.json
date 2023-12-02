@@ -5,8 +5,8 @@
   "author": "Digvijay25182316 <digvijays.edake2002@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server"
+    "start": "node api/server",
+    "dev": "nodemon api/server"
   },
   "dependencies": {
     "dotenv": "^16.3.1",

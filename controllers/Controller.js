@@ -1,7 +1,8 @@
-const { User } = require("./model");
+const { User } = require("../model/model");
 //add user
 exports.addUsers = async (req, res) => {
   const { name, email, wallet_address } = req.body;
+  console.log(name, email, wallet_address);
   try {
     if (!name || !email || !wallet_address) {
       res
