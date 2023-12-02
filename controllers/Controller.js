@@ -2,7 +2,6 @@ const { User } = require("../model/model");
 //add user
 exports.addUsers = async (req, res) => {
   const { name, email, wallet_address } = req.body;
-  console.log(name, email, wallet_address);
   try {
     if (!name || !email || !wallet_address) {
       res
@@ -22,7 +21,10 @@ exports.addUsers = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: error.message || error,
+      message:
+        error.code === 11000
+          ? "user already exists with this wallet address"
+          : error.message || error,
     });
   }
 };

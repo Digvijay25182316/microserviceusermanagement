@@ -8,7 +8,11 @@ const UserSchema = new mongoose.Schema({
     validate: [isEmail, "Please enter a valid email"],
     unique: true,
   },
-  wallet_address: { type: String, required: true },
+  wallet_address: {
+    type: String,
+    required: true,
+    unique: [true, "user with this wallet address exists already"],
+  },
   transactionHistory: [
     { transactionHash: String, createdAt: { type: Date, default: Date.now() } },
   ],
