@@ -1,12 +1,12 @@
 {
   "name": "new2",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "api/index.js",
   "author": "Digvijay25182316 <digvijays.edake2002@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node api/server",
-    "dev": "nodemon api/server"
+    "start": "node api/index",
+    "dev": "nodemon api/index"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
